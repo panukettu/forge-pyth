@@ -1,0 +1,20 @@
+{
+  "type": "module",
+  "module": "ts/ffi.ts",
+  "name": "pyth-ffi",
+  "author": {
+    "url": "https://0xp.lol",
+    "name": "panukettu"
+  },
+  "scripts": {
+    "test": "forge test --mc PythScriptTest -vvv"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "viem": "^2.13.1",
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

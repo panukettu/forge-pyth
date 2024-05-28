@@ -1,66 +1,25 @@
-## Foundry
+# pyth-ffi
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+Gets and/or updates pyth prices within forge scripts using ffi.
 
-Foundry consists of:
+## Requirements
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+**foundry**
 
-## Documentation
+```shell
+curl -L https://foundry.paradigm.xyz | bash
+```
 
-https://book.getfoundry.sh/
+**bun**
+
+```shell
+curl -fsSL https://bun.sh/install | bash
+```
 
 ## Usage
 
-### Build
+1. `bun install`
 
-```shell
-$ forge build
-```
+2. Set your hermes endpoint(s) in: ts/config.ts. If the request fails it will iterate to the next one.
 
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+3. See `scripts/ExampleScript.s.sol` or `test/Pyth.t.sol` for examples.
