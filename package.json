@@ -1,7 +1,7 @@
 {
   "type": "module",
   "module": "ts/ffi.ts",
-  "name": "forge-pyth",
+  "name": "pkxp-forge-pyth",
   "author": {
     "url": "https://0xp.lol",
     "name": "panukettu"

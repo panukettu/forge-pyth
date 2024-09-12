@@ -8,7 +8,7 @@ import {Vm} from "forge-std/Vm.sol";
 import {IPyth, Price, PriceFeed, PythEPs} from "./IPyth.sol";
 
 contract PythScript is Script {
-    string internal _PYTH_SCRIPT_LOCATION = "lib/forge-pyth/ts/ffi.ts";
+    string internal _PYTH_SCRIPT_LOCATION = "lib/pkxp-forge-pyth/ts/ffi.ts";
     string[] private ffiArgs = ["bun", "run", _PYTH_SCRIPT_LOCATION];
 
     PythEPs internal pyth;
