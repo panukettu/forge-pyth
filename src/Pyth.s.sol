@@ -8,8 +8,8 @@ import {Vm} from "forge-std/Vm.sol";
 import {IPyth, Price, PriceFeed, PythEPs} from "./IPyth.sol";
 
 contract PythScript is Script {
-    string internal constant SCRIPT_LOCATION = "ts/ffi.ts";
-    string[] private ffiArgs = ["bun", "run", SCRIPT_LOCATION];
+    string internal _PYTH_SCRIPT_LOCATION = "lib/forge-pyth-ffi/ts/ffi.ts";
+    string[] private ffiArgs = ["bun", "run", _PYTH_SCRIPT_LOCATION];
 
     PythEPs internal pyth;
 
@@ -140,7 +140,7 @@ contract PythScript is Script {
         if (result.exitCode == 1) {
             revert(abi.decode(result.stdout, (string)));
         }
-        ffiArgs = ["bun", "run", SCRIPT_LOCATION];
+        ffiArgs = ["bun", "run", _PYTH_SCRIPT_LOCATION];
         return abi.decode(result.stdout, (bytes[], PriceFeed[]));
     }
 }
