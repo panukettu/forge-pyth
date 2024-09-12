@@ -1,4 +1,6 @@
-# pyth-ffi
+# pyth-ffi 
+
+[![test](https://github.com/panukettu/forge-pyth-ffi/actions/workflows/test.yml/badge.svg)](https://github.com/panukettu/forge-pyth-ffi/actions/workflows/test.yml)
 
 Gets and/or updates pyth prices within forge scripts using ffi.
 
